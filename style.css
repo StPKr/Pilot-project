@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #310d49;
+    color: #fff;
+    padding: 10px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: beige;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+.container {
+    margin: 20px;
+}
+/* Adjusting button display */
+form button {
+    display: inline-block;
+    margin-right: 10px;
+}
