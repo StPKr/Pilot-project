@@ -1,9 +1,10 @@
 import { html, renderer } from "../lib.js";
+import { city } from "./homeView.js";
 
-const forecastTemp = (location, date, weather) => html`
+const forecastTemp = ( date, weather) => html`
 <div class="container" id="current-day">
     <h2>Your location</h2>
-    <p>${location}</p>
+    <p>${city}</p>
 </div>
 <div class="container" id="recipe">
     <h2>Current date</h2>
@@ -16,10 +17,8 @@ const forecastTemp = (location, date, weather) => html`
 `;
 
 export function showForecastView(ctx) {
-    console.log(ctx)
-    debugger
-    const location = 'PH 1';
-    const date = 'PH 2';
+    const rawDate = new Date();
+    const date = rawDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
     const weather = 'PH 3';
-    renderer(forecastTemp(location, date, weather));
+    renderer(forecastTemp( date, weather));
 }

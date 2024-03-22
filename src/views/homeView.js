@@ -57,7 +57,6 @@ async function onRandom(e) {
     const longitude = (Math.random() * 360 - 180).toFixed(2);
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lattitude}&lon=${longitude}&appid=df4100685cdbaac6b9eda4bd1ed8f22a`
     const result = await apiGet(url);
-    debugger
-    console.log(result.name)
+    city = result.name
     page.redirect('/forecast');
 }
