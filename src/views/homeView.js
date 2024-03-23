@@ -24,10 +24,11 @@ const homeTemplate = () => html`
 `;
 
 export function showHomeView(ctx) {
+    ctx.data = "TEST"
     renderer(homeTemplate());
 }
 
-export let city = '';
+export let result = {};
 async function onSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -46,8 +47,7 @@ async function onSubmit(e) {
         return
     }
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lattitude}&lon=${longitude}&appid=df4100685cdbaac6b9eda4bd1ed8f22a`
-    const result = await apiGet(url);
-    city = result.name
+    result = await apiGet(url);
     page.redirect('/forecast');
 
 }
@@ -56,7 +56,6 @@ async function onRandom(e) {
     const lattitude = (Math.random() * 180 - 90).toFixed(2);
     const longitude = (Math.random() * 360 - 180).toFixed(2);
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lattitude}&lon=${longitude}&appid=df4100685cdbaac6b9eda4bd1ed8f22a`
-    const result = await apiGet(url);
-    city = result.name
+    result = await apiGet(url);
     page.redirect('/forecast');
 }
