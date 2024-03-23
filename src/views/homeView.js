@@ -41,7 +41,7 @@ async function onSubmit(e) {
     lattitude = Number(lattitude);
     longitude = Number(longitude);
 
-    if (typeof (lattitude) != 'number') {
+    if (typeof (lattitude) != 'number' || typeof (longitude) != 'number') {
         alert('Please enter a valid number');
         e.target.reset();
         return
