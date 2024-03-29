@@ -63,8 +63,16 @@ h1 {
     color: aliceblue;
 }
 
-h2 {
-    margin-top: 50px;
+#forecast {
+    margin-top: 250px;
+}
+
+#advice {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 35px;
+    color: aliceblue;
+
 }
 
 h4 {
