@@ -3,13 +3,16 @@ body {
     margin: 0;
     padding: 0;
 }
+
 nav {
     background-color: #310d49;
     color: #fff;
     padding: 10px;
 }
+
 nav ul {
     list-style-type: none;
+    font-size: 20px;
     margin: 0;
     padding: 0;
 }
@@ -17,15 +20,54 @@ nav ul {
 a {
     color: beige;
 }
+
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-left: 10px;
 }
+
 .container {
-    margin: 20px;
+    margin: 10px;
 }
+
+form {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
 /* Adjusting button display */
 form button {
     display: inline-block;
-    margin-right: 10px;
+    font-size: 15px;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    overflow: auto;
+    width: 98vw;
+    font-family: 'Yuji Boku', serif;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+p {
+    font-size: 25px;
+    font-style: normal;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+h4 {
+    font-size: 22px;
+    margin-top: 150px;
 }
