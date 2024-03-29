@@ -1,5 +1,5 @@
-import { render, html } from '../node_modules/lit-html/lit-html.js';
-import { classMap } from '../node_modules/lit-html/directives/class-map.js'
+// import { render, html } from '../node_modules/lit-html/lit-html.js';
+import {html, render} from 'https://esm.run/lit-html@1';
 import page from '../node_modules/page/page.mjs';
 
 const root = document.querySelector('main');
@@ -10,6 +10,5 @@ function renderer(templateResult) {
 export {
     renderer,
     html,
-    classMap,
     page
 }
