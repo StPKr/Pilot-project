@@ -1,31 +1,41 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
-}
-
-nav {
-    background-color: #310d49;
-    color: #fff;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
+    overflow: auto;
+    width: 98vw;
+    font-family: 'Yuji Boku', serif;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 a {
     color: beige;
 }
 
-nav ul li {
+nav {
+    font-size: 20px;
     display: inline;
-    margin-left: 10px;
+    overflow: hidden;
 }
 
+nav ul li {
+    display: inline;
+    margin-left: 5px;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
 .container {
     margin: 10px;
 }
@@ -42,26 +52,12 @@ form button {
     font-size: 15px;
 }
 
-body {
-    margin: auto;
-    padding: 0;
-    overflow: auto;
-    width: 98vw;
-    font-family: 'Yuji Boku', serif;
-    background-image: url('../images/bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 p {
     font-size: 25px;
     font-style: normal;
 }
 
-h1 {
-    text-align: center;
-    color: aliceblue;
-}
 
 #forecast {
     margin-top: 250px;
@@ -72,6 +68,7 @@ h1 {
     text-align: center;
     font-size: 35px;
     color: aliceblue;
+    text-shadow: 1px 1px rgb(0, 222, 238);
 
 }
 

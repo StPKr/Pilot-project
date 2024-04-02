@@ -1,8 +1,8 @@
-import { apiGet } from "../data/api.js";
+import { get } from "../data/api.js";
 import { renderer, html, page } from "../lib.js";
 
 
-const homeTemplate = (onSubmit, onRandom) => html`
+const homeTemplate = (onSubmit) => html`
 <div class="container" id="current-day">
     <h1>Welcome, traveller!</h1>
 </div>
@@ -18,7 +18,6 @@ const homeTemplate = (onSubmit, onRandom) => html`
         <label for="email">Longitude:</label>
         <input type="text" id="longitude" name="longitude"><br><br>
         <button type="submit">Submit</button>
-        <button type="button" @click=${onRandom}>Random</button>
     </form><br>
 </div>
 `;
@@ -57,16 +56,16 @@ async function onSubmit(e) {
     }
 
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=df4100685cdbaac6b9eda4bd1ed8f22a`
-    result = await apiGet(url);
+    result = await get(url);
     page.redirect('/forecast');
     e.target.reset();
 
 }
 
-async function onRandom(e) {
+export async function onRandom(e) {
     const latitude = (Math.random() * 180 - 90).toFixed(2);
     const longitude = (Math.random() * 360 - 180).toFixed(2);
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=df4100685cdbaac6b9eda4bd1ed8f22a`
-    result = await apiGet(url);
+    result = await get(url);
     page.redirect('/forecast');
 }
