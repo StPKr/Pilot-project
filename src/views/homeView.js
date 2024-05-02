@@ -24,7 +24,7 @@ const homeTemplate = (onSubmit, onRandom) => html`
 `;
 
 export function showHomeView(ctx) {
-    ctx.data = "TEST"
+    document.body.style.height = "100vh";
     renderer(homeTemplate(onSubmit, onRandom));
 }
 

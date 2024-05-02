@@ -34,5 +34,6 @@ function advice() {
 export function showForecastView(ctx) {
     const rawDate = new Date();
     const date = rawDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    document.body.style.height = "100%";
     renderer(forecastTemp(advice, date));
 }
