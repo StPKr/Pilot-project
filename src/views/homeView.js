@@ -12,7 +12,7 @@ const homeTemplate = (onSubmit, onRandom) => html`
 </div>
 
 <div>
-    <form @submit=${onSubmit}>
+    <form class ="submit-form" @submit=${onSubmit}>
         <label for="name">Latitude:</label>
         <input type="text" id="latitude" name="latitude"><br><br>
         <label for="email">Longitude:</label>
