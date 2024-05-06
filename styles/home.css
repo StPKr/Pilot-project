@@ -1,0 +1,46 @@
+.container {
+    margin: 10px;
+}
+
+form.submit-form {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+form.submit-form label {
+    color: rgb(0, 0, 0);
+}
+
+form.submit-form button {
+    display: inline-block;
+    font-size: 15px;
+}
+
+p {
+    font-size: 25px;
+    font-style: normal;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+    -webkit-text-stroke: 0.25px cyan;
+}
+
+#forecast {
+    margin-top: 250px;
+}
+
+#advice {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 35px;
+    color: aliceblue;
+}
+
+h4 {
+    color: black;
+    font-size: 22px;
+    margin-top: 150px;
+}

@@ -8,11 +8,11 @@ const forecastTemp = (advice, date) => html`
         <h2>Your location</h2>
         <p>${result.name} - ${result.sys.country}</p>
     </div>
-    <div class="container" id="recipe">
+    <div class="container" id="current-date">
         <h2>Current date</h2>
         <p>${date}</p>
     </div>
-    <div class="container" id="ingredients">
+    <div class="container" id="weather">
         <h2>Weather</h2>
         <p>${(result.main.temp - 272.15).toFixed(2)} C</p>
         <p>${(result.wind.speed).toFixed(2)} m/s</p>
@@ -34,5 +34,6 @@ function advice() {
 export function showForecastView(ctx) {
     const rawDate = new Date();
     const date = rawDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    document.body.style.height = "100%";
     renderer(forecastTemp(advice, date));
 }

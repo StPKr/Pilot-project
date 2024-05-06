@@ -12,7 +12,7 @@ const homeTemplate = (onSubmit) => html`
 </div>
 
 <div>
-    <form @submit=${onSubmit}>
+    <form class ="submit-form" @submit=${onSubmit}>
         <label for="name">Latitude:</label>
         <input type="text" id="latitude" name="latitude"><br><br>
         <label for="email">Longitude:</label>
@@ -23,7 +23,7 @@ const homeTemplate = (onSubmit) => html`
 `;
 
 export function showHomeView(ctx) {
-    ctx.data = "TEST"
+    document.body.style.height = "100vh";
     renderer(homeTemplate(onSubmit, onRandom));
 }
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="module" src="./src/app.js"></script>
@@ -11,30 +11,33 @@
 
 <body>
     <header>
+        <!-- Navigation -->
+        <a id="logo" href="/"><img id="logo-img" src="../images/logo.jpg" alt="" /></a>
         <nav>
-            <div id="left">
-                <div class="guest">
-                    <a href="/">Home</a>
-                    <a href="/random">Random</a>
-                    <a href="/PH2">PH2</a>
-                </div>
-            </div>
-            <div id="right">
-                <div class="user">
-                    <a href="/saved">Saved locations</a>
-                    <a href="javascript:void(0)" data-id="logoutBtn">Logout</a>
-                </div>
-                <div class="guest">
-                    <a href="/login">Login</a>
-                    <a href="/register">Register</a>
-                </div>
+            <div>
+                <a href="/">Home</a>
             </div>
 
+            <!-- Logged-in users -->
+            <div class="user">
+                <a href="/dashboard">Favourites</a>
+                <a href="/addFavourite">Add Favourite</a>
+                <a href="javascript:void(0)" data-id="logoutBtn">Logout</a>
+            </div>
+
+            <!-- Guest users -->
+            <div class="guest">
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+
+            </div>
         </nav>
+        <a id="profile" href="/profile"><img id="profile-img" src="../images/profile.jpg" alt="" /></a>
+
     </header>
+   
 </body>
 <main>
 
 </main>
-
 </html>

@@ -1,17 +1,24 @@
-import { page } from './lib.js'
-import { updateNav } from './util.js';
+import { html, page } from './lib.js'
+import { clearUserData, updateNav } from './util.js';
 import { showForecastView } from './views/forecastView.js';
-import { onRandom, showHomeView } from './views/homeView.js';
+import { showHomeView } from './views/homeView.js';
+import { showLoginView } from './views/loginView.js';
+import { showRegisterView } from './views/registerView.js';
+import { testFunc } from './views/test.js';
 
 page('/', showHomeView);
-page('/PH1', () => alert('PH1 - I do nothing yet'));
-page('/PH2', () => alert('PH2 - I also do nothing yet...'));
+page('/login', showLoginView);
+page('/register', showRegisterView);
+page('/dashboard', () => alert('I also do nothing yet...'));
+page('/addFavourite', () => alert('I also do nothing yet...'));
+page('/profile', () => alert('I also do nothing yet...'));
 page('/forecast', showForecastView);
-page('/random', onRandom);
-page('/register', () => console.error('register'));
-page('/login', () => console.error('login'));
 
-
-
-page.start()
+page.start();
 updateNav();
+
+document.querySelector('a[data-id="logoutBtn"]').addEventListener('click', async () => {
+    await clearUserData();
+    updateNav();
+    page.redirect('/');
+});
